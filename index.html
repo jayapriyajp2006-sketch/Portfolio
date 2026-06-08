@@ -405,7 +405,7 @@
 
     .about-card {
 
-        padding: 40px;
+        padding: 35px;
         border-radius: 30px;
         line-height: 1.8;
 
@@ -605,6 +605,313 @@
         text-align: center;
         font-weight: 600;
 
+    }
+
+    .about {
+        padding: 120px 8%;
+    }
+
+    .about-wrapper {
+        display: grid;
+        grid-template-columns: 1.6fr .9fr;
+        gap: 80px;
+        align-items: start;
+    }
+
+    .about-content {
+        position: relative;
+        padding-left: 35px;
+    }
+
+    .about-content::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 2px;
+        height: 180px;
+        background: #B8A8D9;
+    }
+
+    .about-tag {
+        font-size: .9rem;
+        letter-spacing: 4px;
+        color: #B8A8D9;
+        font-weight: 600;
+    }
+
+    .about-content h2 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.8rem;
+        line-height: 1.2;
+        font-weight: 600;
+        max-width: 650px;
+        color: #3f3b38;
+        margin: 18px 0 30px;
+    }
+
+    .about-content p {
+        font-size: 1rem;
+        line-height: 2;
+        color: #666;
+        max-width: 850px;
+        margin-bottom: 25px;
+    }
+
+    .about-side {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .about-card {
+        background: white;
+        padding: 35px;
+        border-radius: 28px;
+        border: 1px solid rgba(184, 168, 217, .15);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .04);
+        transition: .4s;
+    }
+
+    .about-card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card-title {
+        font-size: .60rem;
+        letter-spacing: 3px;
+        color: #B8A8D9;
+        font-weight: 600;
+    }
+
+    .about-card h3 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        margin: 10px 0;
+        color: #4A4542;
+    }
+
+    .about-card h4 {
+        color: #A78ACF;
+        font-weight: 500;
+        font-size: 0.70rem;
+        margin-bottom: 14px;
+    }
+
+    .card-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        font-size: small;
+        color: #666;
+    }
+
+    .badge {
+        display: inline-block;
+        background: #F2EAFD;
+        color: #9D7BD0;
+        padding: 8px 16px;
+        border-radius: 30px;
+        margin: 10px 0 15px;
+        font-size: .9rem;
+    }
+
+    .glass-certifications {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 60px;
+    }
+
+    .glass-card {
+        position: relative;
+        padding: 30px;
+        border-radius: 24px;
+
+        background: rgba(255, 255, 255, 0.45);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+
+        border: 1px solid rgba(184, 168, 217, 0.25);
+
+        box-shadow:
+            0 8px 30px rgba(184, 168, 217, 0.12),
+            inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+        transition: .4s ease;
+    }
+
+    .glass-card::before {
+        content: '';
+        position: absolute;
+        width: 120px;
+        height: 120px;
+        background: #d8c7f7;
+        filter: blur(70px);
+        opacity: .25;
+        top: -30px;
+        right: -30px;
+        z-index: -1;
+    }
+
+    .glass-card:hover {
+        transform: translateY(-8px);
+        box-shadow:
+            0 20px 40px rgba(184, 168, 217, 0.18);
+    }
+
+    .certification-title {
+        position: relative;
+        padding-left: 35px;
+        margin: 60px 0 30px;
+    }
+
+    .certification-title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 2px;
+        height: 90px;
+        background: #c6b5e9;
+        border-radius: 10px;
+    }
+
+    .certification-title span {
+        display: block;
+        font-size: 13px;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: #b9a6df;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    .certification-title h2 {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.1rem;
+        line-height: 1.1;
+        font-weight: 500;
+        color: #3d3737;
+        margin: 0;
+    }
+
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 40px;
+
+    }
+
+    .mini-cert {
+        width: 100%;
+        padding: 28px;
+        padding: 28px;
+        margin-left: 0;
+        background: rgba(255, 255, 255, .6);
+        backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(184, 168, 217, .15);
+        border-radius: 22px;
+        margin-left: 28px;
+        transition: .3s ease;
+    }
+
+    .mini-cert:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(184, 168, 217, .15);
+    }
+
+    .mini-icon {
+        width: 45px;
+        height: 45px;
+
+        border-radius: 14px;
+        background: #f4eefc;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: #b8a8d9;
+        margin-bottom: 15px;
+    }
+
+    .mini-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .mini-cert h4 {
+        font-size: 1rem;
+        font-family: 'Cormorant Garamond', serif;
+        font-weight: 600;
+        color: #4A4542;
+        margin-bottom: 6px;
+        line-height: 1.4;
+    }
+
+    .mini-cert span {
+        font-size: .6rem;
+        color: #b8a8d9;
+        font-weight: 600;
+        letter-spacing: .5px;
+    }
+
+    .cert-icon {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.4rem;
+        background: #f3edf9;
+        border-radius: 18px;
+        margin-bottom: 20px;
+    }
+
+    .glass-card h4 {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.7rem;
+        color: #4A4542;
+        margin-bottom: 10px;
+    }
+
+    .glass-card p {
+        color: #b8a8d9;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    .cert-icon {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 18px;
+
+        background: rgba(184, 168, 217, .12);
+        border: 1px solid rgba(184, 168, 217, .18);
+
+        color: #b8a8d9;
+        margin-bottom: 18px;
+    }
+
+    .cert-icon svg {
+        width: 26px;
+        height: 26px;
+        stroke-width: 1.8;
+    }
+
+    @media(max-width:900px) {
+        .glass-certifications {
+            grid-template-columns: 1fr;
+        }
     }
 
     /* ==========================
@@ -1623,6 +1930,130 @@
             0 0 0 210px rgba(203, 183, 238, .02);
     }
 
+    /* ==========================
+   ABOUT SECTION DARK MODE
+========================== */
+
+    .dark .edu-card,
+    .dark .exp-card,
+    .dark .cert-card {
+
+        background: linear-gradient(135deg,
+                rgba(40, 40, 50, 0.95),
+                rgba(70, 70, 80, 0.85));
+
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+
+        border: 1px solid rgba(184, 168, 217, 0.15);
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+        transition: all .4s ease;
+    }
+
+    /* Hover */
+
+    .dark .edu-card:hover,
+    .dark .exp-card:hover,
+    .dark .cert-card:hover {
+
+        transform: translateY(-8px);
+
+        box-shadow:
+            0 25px 60px rgba(184, 168, 217, 0.15),
+            0 15px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Text Colors */
+
+    .dark .about-heading,
+    .dark.about-h3,
+    .dark .edu-title,
+    .dark .exp-title,
+    .dark .cert-title {
+        color: #ffffff;
+    }
+
+    .dark .about-content p,
+    .dark .edu-college,
+    .dark .exp-company,
+    .dark .exp-text,
+    .dark .cert-provider {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .dark .about-label,
+    .dark .card-label,
+    .dark .cert-label {
+        color: #c9b2f0;
+    }
+
+    .dark .about-line,
+    .dark .cert-line {
+        background: #c9b2f0;
+    }
+
+    /* ABOUT SECTION DARK MODE FIX */
+
+    .dark .about-content {
+        color: #f4f4f4;
+    }
+
+    .dark .about-content h2 {
+        color: #ffffff;
+    }
+
+    .dark .about-content p {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .dark .about-content::before {
+        background: #cbb7ee;
+    }
+
+    .dark .about-card,
+    .dark .mini-cert {
+        background:
+            linear-gradient(135deg,
+                rgba(40, 40, 50, .95),
+                rgba(70, 70, 80, .85));
+
+        backdrop-filter: blur(30px);
+
+        border: 1px solid rgba(184, 168, 217, .15);
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, .45),
+            inset 0 1px 0 rgba(255, 255, 255, .05);
+    }
+
+    .dark .about-card h3,
+    .dark .mini-cert h4 {
+        color: #ffffff;
+    }
+
+    .dark .about-card h4,
+    .dark .mini-cert span {
+        color: #cbb7ee;
+    }
+
+    .dark .card-info {
+        border-top: 1px solid rgba(255, 255, 255, .08);
+        color: rgba(255, 255, 255, .7);
+    }
+
+    .dark .certification-title h2 {
+        color: #ffffff;
+    }
+
+    .dark .mini-icon {
+        background: rgba(184, 168, 217, .12);
+        color: #cbb7ee;
+    }
+
     .header {
 
         position: fixed;
@@ -2276,6 +2707,227 @@
         visibility: visible;
         opacity: 1;
     }
+
+    /* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+    @media (max-width: 992px) {
+
+        .about-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .about-left,
+        .about-right {
+            width: 100%;
+        }
+
+        .about-heading {
+            font-size: 2.4rem;
+            line-height: 1.2;
+        }
+
+        .about-content p {
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+
+        .about-right {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .edu-card,
+        .exp-card {
+            width: 100%;
+            padding: 28px;
+        }
+
+        .certification-section {
+            margin-top: 50px;
+        }
+
+        .certification-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .cert-card {
+            width: 100%;
+            min-height: 140px;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .about-section {
+            padding: 80px 20px;
+        }
+
+        .about-label {
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+        }
+
+        .about-heading {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+
+        .about-content p {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .edu-card,
+        .exp-card {
+            padding: 22px;
+            border-radius: 25px;
+        }
+
+        .edu-title,
+        .exp-title {
+            font-size: 1.8rem;
+        }
+
+        .certification-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .cert-card {
+            min-height: 120px;
+            padding: 18px;
+        }
+
+        .cert-title {
+            font-size: 1rem;
+        }
+
+        .cert-provider {
+            font-size: 0.8rem;
+        }
+    }
+
+    .mini-icon {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid #d8c7ef;
+        box-shadow: 0 5px 15px rgba(184, 168, 217, .25);
+    }
+
+    .mini-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .cert-desc {
+        margin-top: 12px;
+        font-size: 0.78rem;
+        line-height: 1.6;
+        color: #777;
+    }
+
+    .dark .cert-desc {
+        color: rgba(255, 255, 255, .75);
+    }
+
+    .cert-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 12px;
+        font-size: .7rem;
+        color: #b8a8d9;
+        font-weight: 600;
+    }
+
+    /* ==========================
+   CERTIFICATE MOBILE RESPONSIVE
+========================== */
+
+    @media (max-width: 992px) {
+
+        .cert-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .mini-cert {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        .cert-grid {
+            grid-template-columns: 1fr;
+            gap: 18px;
+        }
+
+        .mini-cert {
+            width: 100%;
+            margin-left: 0;
+            padding: 24px;
+        }
+
+        .mini-icon {
+            width: 55px;
+            height: 55px;
+        }
+
+        .mini-cert h4 {
+            font-size: 1.2rem;
+        }
+
+        .cert-desc {
+            font-size: .9rem;
+            line-height: 1.6;
+        }
+
+        .cert-meta {
+            margin-top: 15px;
+        }
+    }
+
+    @media (max-width: 480px) {
+
+        .certification-title {
+            padding-left: 20px;
+        }
+
+        .certification-title h2 {
+            font-size: 2rem;
+            line-height: 1.2;
+        }
+
+        .certification-title span {
+            font-size: 11px;
+            letter-spacing: 3px;
+        }
+
+        .mini-cert {
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        .mini-icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .mini-cert h4 {
+            font-size: 1.1rem;
+        }
+    }
 </style>
 
 <body>
@@ -2283,7 +2935,7 @@
     <header>
         <div class="logo">
             <h1>JAYAPRIYA</h1>
-            <span>FRONT-END INTERN</span>
+            <span>DESIGN • CODE • CREATE</span>
         </div>
 
         <nav class="navbar">
@@ -2370,7 +3022,7 @@
 
             <div class="image-wrapper">
 
-                <img src="photo.jpeg" alt="Profile">
+                <img src="photo.png" alt="Profile">
 
             </div>
 
@@ -2380,63 +3032,133 @@
 
     <!-- ABOUT -->
     <section class="about" id="about">
-
-        <div class="section-title">
-            <span style="color: #b8a8d9;">GET TO KNOW ME</span>
+        <div class="section-header">
+            <span>Who am I</span>
             <h2>About Me</h2>
+            <p>
+            <p>
+                Turning ideas into elegant websites through clean design, efficient code,
+                and a strong passion for technology.
+            </p>
+            </p>
         </div>
+        <div class="about-wrapper">
 
-        <div class="about-container">
+            <!-- LEFT -->
 
-            <div class="about-left full-about">
+            <div class="about-content">
 
+                <span class="about-tag">ABOUT ME</span>
 
-
-                <h3 style="text-align: center; color: #B8A8D9;">
-                    Crafting beautiful digital <br>experiences with creativity and code.
-                </h3><br>
+                <h2>Turning Ideas Into Seamless Web Experiences.</h2>
 
                 <p>
-                    I am Jayapriya, a dedicated BCA student and aspiring Front-End
-                    Developer with a passion for creating modern and engaging web
-                    experiences. I enjoy transforming ideas into functional websites
-                    through clean code, thoughtful design, and attention to detail.
-
-                    <br><br>
-
-                    My interest in technology inspires me to continuously explore new
-                    tools, frameworks, and development practices. I believe that every
-                    successful website should provide both visual appeal and a smooth
-                    user experience, and I strive to achieve that balance in every
-                    project I create.
-
-                    <br><br>
-
-                    As a lifelong learner, I am committed to improving my skills,
-                    embracing challenges, and expanding my knowledge through practical
-                    projects and continuous learning. My ambition is to contribute to
-                    innovative digital solutions while growing as a creative and skilled
-                    developer.
+                    I am Jayapriya, a Front-End Developer and BCA student at M.O.P. Vaishnav College for Women with a
+                    strong passion for creating intuitive and visually engaging digital solutions. Through academic
+                    learning, hands on projects, and professional experience as a Front-End Intern at Mr Coders Hub, I
+                    have developed a solid foundation in HTML, CSS, JavaScript, responsive design, and modern web
+                    development practices.
                 </p>
 
-                <div class="about-highlights">
+                <p>
+                    During my internship, I contributed to realworld projects, collaborated on responsive user
+                    interfaces, and successfully delivered two web applications. I am committed to writing clean code,
+                    solving problems efficiently, and continuously expanding my technical expertise to create meaningful
+                    digital experiences.
+                </p>
 
-                    <div class="highlight-box">
-                        <h4>Education</h4>
-                        <p>BCA • M.O.P. Vaishnav College for Women</p>
-                    </div>
+            </div>
 
-                    <div class="highlight-box">
-                        <h4>Focus Area</h4>
-                        <p>Front-End Development & Modern Web Technologies</p>
-                    </div>
+            <!-- RIGHT -->
 
-                    <div class="highlight-box">
-                        <h4>Passion</h4>
-                        <p>Building elegant, responsive and user-friendly websites</p>
+            <div class="about-side">
+
+                <div class="about-card">
+
+                    <span class="card-title">EDUCATION</span>
+
+                    <h3>Bachelor of Computer Applications</h3>
+
+                    <h4>M.O.P. Vaishnav College for Women</h4>
+
+                    <div class="card-info">
+                        <span>2024 – 2027</span>
+                        <span>CGPA 8.2 / 10</span>
                     </div>
 
                 </div>
+
+                <div class="about-card">
+
+                    <span class="card-title">EXPERIENCE</span>
+
+                    <h3>Front-End Intern</h3>
+
+                    <h4>Mr Coders Hub</h4>
+
+
+
+                    <p style="font-size: small;">
+                        Developed 3 responsive web projects using HTML, CSS and JavaScript while gaining practical
+                        industry experience in one month internship.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="certification-title">
+            <span>CERTIFICATIONS</span>
+            <h2>Professional Certifications</h2>
+        </div>
+        <div class="cert-grid">
+
+            <div class="mini-cert">
+                <div class="mini-icon">
+                    <img src="nasscom.jpeg" alt="NASSCOM">
+                </div>
+
+                <h4>Digital Engineering</h4>
+
+                <span>NASSCOM</span>
+
+                <p class="cert-desc">
+                    Learned engineering fundamentals, digital technologies,
+                    problem solving, and industry-ready technical skills.
+                </p>
+
+            </div>
+
+            <div class="mini-cert">
+                <div class="mini-icon">
+                    <img src="mongodb.jpg" alt="MongoDB">
+                </div>
+
+                <h4>MongoDB Basics</h4>
+
+                <span>Credly</span>
+
+                <p class="cert-desc">
+                    Gained knowledge of MongoDB collections, documents,
+                    CRUD operations, and NoSQL database concepts.
+                </p>
+
+            </div>
+
+            <div class="mini-cert">
+                <div class="mini-icon">
+                    <img src="nasscom.jpeg" alt="NASSCOM">
+                </div>
+
+                <h4>Digital Applications</h4>
+
+                <span>NASSCOM</span>
+
+                <p class="cert-desc">
+                    Developed practical skills in productivity tools,
+                    digital communication, and workplace applications.
+                </p>
 
             </div>
 
@@ -2463,7 +3185,7 @@
                     <i class="ri-code-box-line"></i>
                 </div>
 
-                <h3>Development</h3>
+                <h3 style=" font-family: Cormorant Garamond, serif;">Development</h3>
 
                 <div class="skill-tags">
                     <span>HTML5</span>
@@ -2481,7 +3203,7 @@
                     <i class="ri-database-2-line"></i>
                 </div>
 
-                <h3>Database & Backend</h3>
+                <h3 style=" font-family: Cormorant Garamond, serif;">Database & Backend</h3>
 
                 <div class="skill-tags">
                     <span>SQL</span>
@@ -2497,7 +3219,7 @@
                     <i class="ri-palette-line"></i>
                 </div>
 
-                <h3>UI / UX Design</h3>
+                <h3 style=" font-family: Cormorant Garamond, serif;">UI / UX Design</h3>
 
                 <div class="skill-tags">
                     <span>Figma</span>
@@ -2514,7 +3236,7 @@
                     <i class="ri-tools-line"></i>
                 </div>
 
-                <h3>Tools & Platforms</h3>
+                <h3 style=" font-family: Cormorant Garamond, serif;">Tools & Platforms</h3>
 
                 <div class="skill-tags">
                     <span>GitHub</span>
@@ -2699,7 +3421,7 @@
 
                 <div class="logo">
                     <h1>JAYAPRIYA</h1>
-                    <span>FRONT-END INTERN</span>
+                    <span>DESIGN • CODE • CREATE</span>
                 </div>
                 <br>
                 <p>
@@ -2719,7 +3441,7 @@
 
             <div class="footer-links">
 
-                <h4>Navigation</h4>
+                <h4 style="font-family: Cormorant Garamond, serif;">Navigation</h4>
 
                 <a href="#home">Home</a>
                 <a href="#about">About</a>
@@ -2731,7 +3453,7 @@
 
             <div class="footer-contact">
 
-                <h4>Contact</h4>
+                <h4 style="font-family: Cormorant Garamond, serif;">Contact</h4>
 
                 <p>
                     <i class="ri-mail-line"></i>
@@ -2915,8 +3637,12 @@
             console.log("FORM SUBMITTED");
         });
 
-    </script>
 
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
