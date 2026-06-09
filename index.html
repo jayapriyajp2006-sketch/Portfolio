@@ -2928,6 +2928,196 @@
             font-size: 1.1rem;
         }
     }
+
+    .cert-link {
+        text-decoration: none;
+        color: inherit;
+        display: block;
+    }
+
+    .cert-link .mini-cert {
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .cert-link:hover .mini-cert {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .mini-cert::after {
+        content: "↗";
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 18px;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .mini-cert {
+        position: relative;
+    }
+
+    .cert-link:hover .mini-cert::after {
+        opacity: 1;
+    }
+
+    .project-modal {
+
+        position: fixed;
+        inset: 0;
+
+        background: rgba(0, 0, 0, .7);
+
+        backdrop-filter: blur(15px);
+
+        z-index: 9999;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition: .4s;
+    }
+
+    .project-modal.active {
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+
+        width: 95%;
+        max-width: 1400px;
+
+        height: 90vh;
+
+        margin: 3vh auto;
+
+        overflow-y: auto;
+
+        border-radius: 35px;
+
+        background: var(--bg);
+
+        position: relative;
+    }
+
+    .modal-hero img {
+
+        width: 100%;
+        height: 500px;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+    .modal-body {
+
+        padding: 50px;
+    }
+
+    .project-tag {
+
+        color: var(--primary);
+
+        letter-spacing: 3px;
+    }
+
+    .modal-body h1 {
+
+        font-size: 70px;
+
+        margin: 15px 0;
+
+        font-family: 'Cormorant Garamond';
+    }
+
+    .modal-stats {
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 20px;
+
+        margin: 50px 0;
+    }
+
+    .stat {
+
+        padding: 30px;
+
+        border-radius: 25px;
+
+        background:
+            linear-gradient(135deg,
+                rgba(184, 168, 217, .12),
+                rgba(255, 255, 255, .05));
+    }
+
+    .feature-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        margin-top: 40px;
+    }
+
+    .feature {
+
+        padding: 30px;
+
+        border-radius: 25px;
+
+        background: var(--card);
+    }
+
+    .gallery-grid {
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 20px;
+
+        margin-top: 50px;
+    }
+
+    .gallery-grid img {
+
+        width: 100%;
+
+        border-radius: 25px;
+    }
+
+    .close-modal {
+
+        position: absolute;
+
+        top: 25px;
+        right: 25px;
+
+        width: 55px;
+        height: 55px;
+
+        border: none;
+
+        border-radius: 50%;
+
+        cursor: pointer;
+
+        font-size: 28px;
+
+        background: white;
+
+        z-index: 10;
+    }
 </style>
 
 <body>
@@ -3114,53 +3304,58 @@
         </div>
         <div class="cert-grid">
 
-            <div class="mini-cert">
-                <div class="mini-icon">
-                    <img src="nasscom.jpeg" alt="NASSCOM">
+            <a href="n.pdf" target="_blank" class="cert-link">
+
+                <div class="mini-cert">
+                    <div class="mini-icon">
+                        <img src="nasscom.jpeg" alt="NASSCOM">
+                    </div>
+
+                    <h4>Digital Engineering</h4>
+
+                    <span>NASSCOM</span>
+
+                    <p class="cert-desc">
+                        Successfully completed the Digital Engineering certification from NASSCOM FutureSkills Prime,
+                        gaining expertise in engineering principles, digital innovation, problem-solving, and
+                        professional technical practices.
+                    </p>
                 </div>
 
-                <h4>Digital Engineering</h4>
+            </a>
+            <a href="mangodbcer.jpeg" target="_blank" class="cert-link">
+                <div class="mini-cert">
+                    <div class="mini-icon">
+                        <img src="mongodb.jpg" alt="MongoDB">
+                    </div>
 
-                <span>NASSCOM</span>
+                    <h4>MongoDB Basics</h4>
 
-                <p class="cert-desc">
-                    Learned engineering fundamentals, digital technologies,
-                    problem solving, and industry-ready technical skills.
-                </p>
+                    <span>Credly</span>
 
-            </div>
-
-            <div class="mini-cert">
-                <div class="mini-icon">
-                    <img src="mongodb.jpg" alt="MongoDB">
+                    <p class="cert-desc">
+                        Certified in MongoDB Basics for Students, showcasing skills in NoSQL database design, document
+                        management, CRUD operations, and modern database development practices.
+                    </p>
                 </div>
+            </a>
+            <a href="nasscomcertificate1.pdf" target="_blank" class="cert-link">
+                <div class="mini-cert">
+                    <div class="mini-icon">
+                        <img src="nasscom.jpeg" alt="NASSCOM">
+                    </div>
 
-                <h4>MongoDB Basics</h4>
+                    <h4>Digital Applications Fundamentals(STEM)</h4>
 
-                <span>Credly</span>
+                    <span>NASSCOM</span>
 
-                <p class="cert-desc">
-                    Gained knowledge of MongoDB collections, documents,
-                    CRUD operations, and NoSQL database concepts.
-                </p>
-
-            </div>
-
-            <div class="mini-cert">
-                <div class="mini-icon">
-                    <img src="nasscom.jpeg" alt="NASSCOM">
+                    <p class="cert-desc">
+                        Certified in Digital Application Fundamentals by NASSCOM FutureSkills Prime, showcasing skills
+                        in digital productivity, workplace communication, collaboration tools, and professional digital
+                        practices.
+                    </p>
                 </div>
-
-                <h4>Digital Applications</h4>
-
-                <span>NASSCOM</span>
-
-                <p class="cert-desc">
-                    Developed practical skills in productivity tools,
-                    digital communication, and workplace applications.
-                </p>
-
-            </div>
+            </a>
 
         </div>
     </section>
@@ -3341,6 +3536,7 @@
         </div>
 
     </section>
+
     <!-- CONTACT -->
 
     <section class="contact" id="contact">
@@ -3477,7 +3673,7 @@
         <div class="footer-bottom">
 
             <p>
-                © 2026 Lavanya. All Rights Reserved.
+                © 2026 Jayapriya. All Rights Reserved.
             </p>
 
 
